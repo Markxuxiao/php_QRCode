@@ -16,7 +16,7 @@
 		}
 		
 		function findOne_by_id($id){
-			$sql = 'select * from '.$this->_table.' where id='.$id;
+			$sql = 'select * from '.$this->_table.' where nid='.$id;
 			return DB::findOne($sql);
 		}
 

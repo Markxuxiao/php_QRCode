@@ -9,5 +9,5 @@
 	//配置二维码图片存放文件夹
 	define('TWO_D_CODE_FILE', 'TWO_D_CODE_FILE/');
 	//配置二维码每一页显示个数
-	define('TWO_D_CODE_NUMBER', '50');
+	define('TWO_D_CODE_NUMBER', '300');
 ?>

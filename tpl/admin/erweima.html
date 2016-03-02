@@ -12,23 +12,94 @@
 </style>
 <!-- content start -->
 <div class="admin-content">
-  <div class="am-g">
-    <div class="am-u-sm-12 am-u-md-6">
+  <div class="am-cf" style="width:700px;">
+    <h4>搜索</h4>
+    <div class="am-u-sm-12">
       <div class="am-btn-toolbar">
         <div class="am-btn-group am-btn-group-xs">
-          <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
-          <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>
-          <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button>
-          <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+          <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 全部</button>
+          <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 未激活</button>
+          <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 已激活</button>
         </div>
       </div>
     </div>
-    <div class="am-u-sm-12 am-u-md-3">
+    <div class="am-u-sm-12 ">
       <div class="am-form-group">
-        <select data-am-selected="{btnSize: 'sm'}">
-          <option value="option1">所有类别</option>
+        <select multiple data-am-selected="{searchBox: 1,maxHeight: 200}">
+          <option selected value="option1">所有类别</option>
           <option value="option2">IT业界</option>
           <option value="option3">数码产品</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
           <option value="option3">笔记本电脑</option>
           <option value="option3">平板电脑</option>
           <option value="option3">只能手机</option>
@@ -36,11 +107,11 @@
         </select>
       </div>
     </div>
-    <div class="am-u-sm-12 am-u-md-3">
+    <div class="am-u-sm-12 ">
          <form id="form1" name="form1" method="get" action="admin.php">
       <div class="am-input-group am-input-group-sm">
         <input name="controller"  type="hidden" value="admin">
-        <input name="method"  type="hidden" value="erweima">
+        <input name="method"  type="hidden" value="erweima_find_one">
         <input name="erweima_id" id="erweima_id" type="text" class="am-form-field">
 
         <span class="am-input-group-btn">
@@ -67,22 +138,23 @@
 	</div>
 
   	<!-- 分页模板 -->
+    {{if $page.count }}
   	<table class="am-print-hide" style="margin-top:10px;">
   	    <tr>
   		    <td>
-  				共{{$page.count}}条数据 每页{{$page.pagesize}}条 共{{$page.pagecount}}页 当前第{{$page.page}}页
+  				共{{$page.count}}条数据 每页{{$page.pagesize}}条 共{{$page.pagecount}}页     
   			</td>
   			<td>
   				{{if $page.first eq 1}}
   					<a href="{{$page.baseurl}}">首页</a>
   				{{else}}
-  					首页
+  				
   				{{/if}}
 
   				{{if $page.pre eq 1}}
   					<a href="{{$page.baseurl}}&page={{$page.page-1}}">上一页</a>
   				{{else}}
-  					上一页
+  					
   				{{/if}}
 
   				{{foreach from=$page.pagelist item=vols}}
@@ -92,7 +164,7 @@
   							<a href="{{$page.baseurl}}&page={{$vols.page}}">[{{$vols.page}}]</a>
                 {{/if}}
   						{{else}}
-  							[{{$vols.page}}]
+  						[{{$vols.page}}]
   						{{/if}}
   					
   				{{/foreach}}
@@ -100,18 +172,18 @@
   				{{if $page.next eq 1}}
   					<a href="{{$page.baseurl}}&page={{$page.page+1}}">下一页</a>
   				{{else}}
-  				
-  					下一页
+  		
   				{{/if}}
 
   				{{if $page.last eq 1}}
   					<a href="{{$page.baseurl}}&page={{$page.pagecount}}">尾页</a>
   				{{else}}
-  					尾页
+  		
   				{{/if}}
   			</td>
   		</tr>
   	</table>
+    {{/if}}
   	<!-- 分页模板end -->
 
  

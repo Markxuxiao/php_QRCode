@@ -21,11 +21,8 @@
 			VIEW::display('admin/index.html');
 		}
 		public function erweima(){
-			if(isset($_GET['erweima_id'])){
-				$apage = $_GET['erweima_id'];
-				echo $apage;
-				
-			}
+
+
 			$endData = $limit = TWO_D_CODE_NUMBER ;//配置分页显示条数
 			$page = 1;
 			$startData = 0;
@@ -52,20 +49,36 @@
 			}
 
 			//生成分页
-			$page = new Page( $data_count , $page , $limit , 6 , 'admin.php?controller=admin&method=erweima' );
-			$page->__getpagelist();
+			$page_d = new Page( $data_count , $page , $limit , 6 , 'admin.php?controller=admin&method=erweima' );
+			$page_d->__getpagelist();
 		
 			
 			
 
-			VIEW::assign(array('page'=>$page->result));
+			VIEW::assign(array('page'=>$page_d->result));
 
 			VIEW::assign(array('data'=>$data));
 
 			VIEW::display('admin/erweima.html');
 		}
 
-
+		public function erweima_find_one(){
+			if(isset($_GET['erweima_id'])){
+				$erweima_id = $_GET['erweima_id'];
+			}
+			$erweima_obj = M('erweima');
+			$data = $erweima_obj->findOne_by_id($erweima_id);
+			if($data){
+			$url = $erweima_obj->urlForPNG($data['nid']);
+			$data['url']= $url;
+			$data_d = array();
+			$data_d[0]=$data;
+			}
+			
+			var_dump($data_d);
+			VIEW::assign(array('data'=>$data_d));
+			VIEW::display('admin/erweima.html');
+		}
 
 
 

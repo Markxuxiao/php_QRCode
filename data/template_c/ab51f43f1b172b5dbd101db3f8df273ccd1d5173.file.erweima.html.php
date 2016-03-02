@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2016-02-29 09:35:20
+<?php /* Smarty version Smarty-3.1.16, created on 2016-03-02 04:53:23
          compiled from "tpl\admin\erweima.html" */ ?>
 <?php /*%%SmartyHeaderCode:932156cebb4d1ad1c1-12396706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ab51f43f1b172b5dbd101db3f8df273ccd1d5173' => 
     array (
       0 => 'tpl\\admin\\erweima.html',
-      1 => 1456734914,
+      1 => 1456890800,
       2 => 'file',
     ),
   ),
@@ -42,23 +42,93 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </style>
 <!-- content start -->
 <div class="admin-content">
-  <div class="am-g">
+  <div class="am-cf" style="width:700px;">
     <div class="am-u-sm-12 am-u-md-6">
       <div class="am-btn-toolbar">
         <div class="am-btn-group am-btn-group-xs">
-          <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
-          <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>
-          <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button>
-          <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+          <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 全部</button>
+          <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 未激活</button>
+          <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 已激活</button>
         </div>
       </div>
     </div>
     <div class="am-u-sm-12 am-u-md-3">
       <div class="am-form-group">
-        <select data-am-selected="{btnSize: 'sm'}">
-          <option value="option1">所有类别</option>
+        <select multiple data-am-selected="{searchBox: 1,maxHeight: 200}">
+          <option selected value="option1">所有类别</option>
           <option value="option2">IT业界</option>
           <option value="option3">数码产品</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
+          <option value="option3">超极本</option>
+          <option value="option3">笔记本电脑</option>
+          <option value="option3">平板电脑</option>
+          <option value="option3">只能手机</option>
+          <option value="option3">超极本</option>
           <option value="option3">笔记本电脑</option>
           <option value="option3">平板电脑</option>
           <option value="option3">只能手机</option>
@@ -70,7 +140,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
          <form id="form1" name="form1" method="get" action="admin.php">
       <div class="am-input-group am-input-group-sm">
         <input name="controller"  type="hidden" value="admin">
-        <input name="method"  type="hidden" value="erweima">
+        <input name="method"  type="hidden" value="erweima_find_one">
         <input name="erweima_id" id="erweima_id" type="text" class="am-form-field">
 
         <span class="am-input-group-btn">
@@ -105,21 +175,21 @@ if (!$_smarty_tpl->tpl_vars['value']->_loop) {
 	</div>
 
   	<!-- 分页模板 -->
+    <?php if ($_smarty_tpl->tpl_vars['page']->value['count']) {?>
   	<table class="am-print-hide" style="margin-top:10px;">
   	    <tr>
   		    <td>
   				共<?php echo $_smarty_tpl->tpl_vars['page']->value['count'];?>
 条数据 每页<?php echo $_smarty_tpl->tpl_vars['page']->value['pagesize'];?>
 条 共<?php echo $_smarty_tpl->tpl_vars['page']->value['pagecount'];?>
-页 当前第<?php echo $_smarty_tpl->tpl_vars['page']->value['page'];?>
-页
+页     
   			</td>
   			<td>
   				<?php if ($_smarty_tpl->tpl_vars['page']->value['first']==1) {?>
   					<a href="<?php echo $_smarty_tpl->tpl_vars['page']->value['baseurl'];?>
 ">首页</a>
   				<?php } else { ?>
-  					首页
+  				
   				<?php }?>
 
   				<?php if ($_smarty_tpl->tpl_vars['page']->value['pre']==1) {?>
@@ -127,7 +197,7 @@ if (!$_smarty_tpl->tpl_vars['value']->_loop) {
 &page=<?php echo $_smarty_tpl->tpl_vars['page']->value['page']-1;?>
 ">上一页</a>
   				<?php } else { ?>
-  					上一页
+  					
   				<?php }?>
 
   				<?php  $_smarty_tpl->tpl_vars['vols'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['vols']->_loop = false;
@@ -144,7 +214,7 @@ $_smarty_tpl->tpl_vars['vols']->_loop = true;
 ]</a>
                 <?php }?>
   						<?php } else { ?>
-  							[<?php echo $_smarty_tpl->tpl_vars['vols']->value['page'];?>
+  						[<?php echo $_smarty_tpl->tpl_vars['vols']->value['page'];?>
 ]
   						<?php }?>
   					
@@ -155,8 +225,7 @@ $_smarty_tpl->tpl_vars['vols']->_loop = true;
 &page=<?php echo $_smarty_tpl->tpl_vars['page']->value['page']+1;?>
 ">下一页</a>
   				<?php } else { ?>
-  				
-  					下一页
+  		
   				<?php }?>
 
   				<?php if ($_smarty_tpl->tpl_vars['page']->value['last']==1) {?>
@@ -164,11 +233,12 @@ $_smarty_tpl->tpl_vars['vols']->_loop = true;
 &page=<?php echo $_smarty_tpl->tpl_vars['page']->value['pagecount'];?>
 ">尾页</a>
   				<?php } else { ?>
-  					尾页
+  		
   				<?php }?>
   			</td>
   		</tr>
   	</table>
+    <?php }?>
   	<!-- 分页模板end -->
 
  
