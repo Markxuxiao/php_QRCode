@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2016-03-02 04:53:23
+<?php /* Smarty version Smarty-3.1.16, created on 2016-03-02 08:03:27
          compiled from "tpl\admin\erweima.html" */ ?>
 <?php /*%%SmartyHeaderCode:932156cebb4d1ad1c1-12396706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ab51f43f1b172b5dbd101db3f8df273ccd1d5173' => 
     array (
       0 => 'tpl\\admin\\erweima.html',
-      1 => 1456890800,
+      1 => 1456902204,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_56cebb4d1d42c9_07367262')) {function content_56cebb4d1d42c9_07367262($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("admin/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-<div class="am-cf admin-main">
+<div class="am-cf admin-main no-print">
   <?php echo $_smarty_tpl->getSubTemplate ("admin/sidebar.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <style>
@@ -41,18 +41,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   }
 </style>
 <!-- content start -->
-<div class="admin-content">
+<div class="admin-content no-print">
   <div class="am-cf" style="width:700px;">
-    <div class="am-u-sm-12 am-u-md-6">
+    <h4>搜索</h4>
+    <div class="am-u-sm-12">
       <div class="am-btn-toolbar">
         <div class="am-btn-group am-btn-group-xs">
-          <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 全部</button>
+          <button id="quanbu" type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 全部</button>
           <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 未激活</button>
           <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 已激活</button>
         </div>
       </div>
     </div>
-    <div class="am-u-sm-12 am-u-md-3">
+    <div class="am-u-sm-12 ">
       <div class="am-form-group">
         <select multiple data-am-selected="{searchBox: 1,maxHeight: 200}">
           <option selected value="option1">所有类别</option>
@@ -136,8 +137,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </select>
       </div>
     </div>
-    <div class="am-u-sm-12 am-u-md-3">
-         <form id="form1" name="form1" method="get" action="admin.php">
+    <div class="am-u-sm-12 ">
+         <form id="form1" name="form1" method="get" action="admin.php" target="_top">
       <div class="am-input-group am-input-group-sm">
         <input name="controller"  type="hidden" value="admin">
         <input name="method"  type="hidden" value="erweima_find_one">
@@ -152,7 +153,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
   </div>
 
-	<div class="am-cf " style="width:700px;">
+	<div id="dat"class="am-cf " style="width:700px;">
 
 		<?php  $_smarty_tpl->tpl_vars['value'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['value']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['data']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
