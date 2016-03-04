@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2016-02-29 06:05:02
+<?php /* Smarty version Smarty-3.1.16, created on 2016-03-02 10:33:23
          compiled from "tpl\admin\header.html" */ ?>
 <?php /*%%SmartyHeaderCode:2437356d25f24936fd5-51877074%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7fcf84a0ae3e0d0e059881672a243143dc6fdda' => 
     array (
       0 => 'tpl\\admin\\header.html',
-      1 => 1456722299,
+      1 => 1456910864,
       2 => 'file',
     ),
   ),
@@ -31,6 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <meta http-equiv="Cache-Control" content="no-siteapp" />
   <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
   <link rel="stylesheet" href="assets/css/admin.css">
+
 </head>
 <body>
 <!--[if lte IE 9]>

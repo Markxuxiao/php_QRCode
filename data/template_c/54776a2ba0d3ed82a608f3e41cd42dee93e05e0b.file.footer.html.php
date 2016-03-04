@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2016-02-29 07:28:01
+<?php /* Smarty version Smarty-3.1.16, created on 2016-03-03 04:52:59
          compiled from "tpl\admin\footer.html" */ ?>
 <?php /*%%SmartyHeaderCode:1192656d25f8a9884f1-49216905%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '54776a2ba0d3ed82a608f3e41cd42dee93e05e0b' => 
     array (
       0 => 'tpl\\admin\\footer.html',
-      1 => 1456727275,
+      1 => 1456977169,
       2 => 'file',
     ),
   ),
@@ -40,12 +40,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script src="assets/js/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/jquery-checkAll.js"></script>
 <script src="assets/js/app.js"></script>
-<script>
-    $(".erweimapng").on('click',function () {
-      $(this).remove();
-    })
-</script>
+
 </body>
 </html>
 <?php }} ?>

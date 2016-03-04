@@ -14,7 +14,10 @@
 		
 			return DB::findAll($sql);
 		}
-		
+		function find_in($data){
+			$sql = 'select * from '.$this->_table.' where nid IN ('.$data.')';
+			return DB::findAll($sql);
+		}
 		function findOne_by_id($id){
 			$sql = 'select * from '.$this->_table.' where nid='.$id;
 			return DB::findOne($sql);

@@ -12,18 +12,23 @@
 </style>
 <!-- content start -->
 <div class="admin-content">
-  <div class="am-cf" style="width:700px;">
+  <div class="am-cf">
     <h4>搜索</h4>
-    <div class="am-u-sm-12">
+    <div class="am-u-sm-12 am-u-md-6">
       <div class="am-btn-toolbar">
         <div class="am-btn-group am-btn-group-xs">
           <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 全部</button>
           <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 未激活</button>
           <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 已激活</button>
+          <form id='erweima_print' method="post" name='erweima_print' action="admin.php?controller=admin&method=erweima_print" target="_blank" style="float:left;">
+            <input name="data" type="hidden"  value="">
+           <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 打印</button>
+          </form>
+
         </div>
       </div>
     </div>
-    <div class="am-u-sm-12 ">
+    <div class="am-u-sm-12 am-u-md-3">
       <div class="am-form-group">
         <select multiple data-am-selected="{searchBox: 1,maxHeight: 200}">
           <option selected value="option1">所有类别</option>
@@ -107,11 +112,12 @@
         </select>
       </div>
     </div>
-    <div class="am-u-sm-12 ">
+    <div class="am-u-sm-12 am-u-md-3">
          <form id="form1" name="form1" method="get" action="admin.php">
       <div class="am-input-group am-input-group-sm">
         <input name="controller"  type="hidden" value="admin">
         <input name="method"  type="hidden" value="erweima_find_one">
+
         <input name="erweima_id" id="erweima_id" type="text" class="am-form-field">
 
         <span class="am-input-group-btn">
@@ -122,69 +128,102 @@
        </form>
     </div>
   </div>
+    <div class="am-g">
+          <div class="am-u-sm-12">
+            <form class="am-form">
+              <table id="table-single" class="am-table am-table-striped am-table-hover table-main" >
+                <thead>
+                  <tr>
+                    <th class="table-check">
+                      <input id = "check-all-box" type="checkbox" />
+                    </th>
+                    <th class="table-id">ID</th>
+                    <th class="table-title">PID</th>
+                    <th class="table-type">URL</th>
+                    <th class="table-author am-hide-sm-only">作者</th>
+                    <th class="table-date am-hide-sm-only">修改日期</th>
+                    <th class="table-set">操作</th>
+                  </tr>
+              </thead>
+              <tbody id="table-single-tbody">
+                {{foreach $data as $value}}
+                <tr>
+                  <td><input type="checkbox" ></td>
+                  <td>{{$value.id}}</td>
+                  <td>{{$value.nid}}</td>
+                  <td>{{$value.url}}</td>
+                  <td class="am-hide-sm-only">测试1号</td>
+                  <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
+                  <td>
+                    <div class="am-btn-toolbar">
+                      <div class="am-btn-group am-btn-group-xs">
+                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                        <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
+                        <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                        
+    
+                          {{foreachelse}}
+                          </tr>
+                            <td>无数据</td>
+                           <td>无数据</td>
+                           <td>无数据</td>
+                           </tr>
+                            {{/foreach}}
+                  
+          </tbody>
+        </table>
 
-	<div class="am-cf " style="width:700px;">
 
-		{{foreach $data as $value}}
-		<div class="erweimapng" >
-		  	<img class="am-margin-xs" src="{{$value.url}}" alt="">
-		  	<br/>
-		  	{{$value.nid}}
-		</div>
-	  	{{foreachelse}}
-	  	<div>无数据</div>
-	  	{{/foreach}}
-	 
-	</div>
+          <!-- 分页模板end -->
+          {{if $page.count }}
+          <div class="am-cf">
+          共 {{$page.count}} 条记录,每页{{$page.pagesize}}条
 
-  	<!-- 分页模板 -->
-    {{if $page.count }}
-  	<table class="am-print-hide" style="margin-top:10px;">
-  	    <tr>
-  		    <td>
-  				共{{$page.count}}条数据 每页{{$page.pagesize}}条 共{{$page.pagecount}}页     
-  			</td>
-  			<td>
-  				{{if $page.first eq 1}}
-  					<a href="{{$page.baseurl}}">首页</a>
-  				{{else}}
-  				
-  				{{/if}}
+          <div class="am-fr">
+            <ul class="am-pagination">
+                      {{if $page.first eq 1}}
+                        <li><a href="{{$page.baseurl}}">首页</a></li>
+                        {{else}}
 
-  				{{if $page.pre eq 1}}
-  					<a href="{{$page.baseurl}}&page={{$page.page-1}}">上一页</a>
-  				{{else}}
-  					
-  				{{/if}}
+                        <li class="am-disabled"><a href="javascript:;">首页</a></li>
+                      {{/if}}
 
-  				{{foreach from=$page.pagelist item=vols}}
-  					
-  					   {{if $vols.link eq 1}}
-                {{if $vols.page!=""}}
-  							<a href="{{$page.baseurl}}&page={{$vols.page}}">[{{$vols.page}}]</a>
-                {{/if}}
-  						{{else}}
-  						[{{$vols.page}}]
-  						{{/if}}
-  					
-  				{{/foreach}}
+                      {{if $page.pre eq 1}}
+                        <li><a href="{{$page.baseurl}}&page={{$page.page-1}}">«</a></li>
+                        {{else}}
+                        <li class="am-disabled"><a href="javascript:;">«</a></li>
+                      {{/if}}
 
-  				{{if $page.next eq 1}}
-  					<a href="{{$page.baseurl}}&page={{$page.page+1}}">下一页</a>
-  				{{else}}
-  		
-  				{{/if}}
+                      {{foreach from=$page.pagelist item=vols}}
+                         {{if $vols.link eq 1}}
+                          {{if $vols.page!=""}}
+                           <li><a href="{{$page.baseurl}}&page={{$vols.page}}">{{$vols.page}}</a></li>
+                          {{/if}}
+                        {{else}}
+                        <li class="am-active"><a href="javascript:;">{{$vols.page}}</a></li>
+                        {{/if}}
+                      {{/foreach}}
 
-  				{{if $page.last eq 1}}
-  					<a href="{{$page.baseurl}}&page={{$page.pagecount}}">尾页</a>
-  				{{else}}
-  		
-  				{{/if}}
-  			</td>
-  		</tr>
-  	</table>
-    {{/if}}
-  	<!-- 分页模板end -->
+                      {{if $page.next eq 1}}
+                        <li><a href="{{$page.baseurl}}&page={{$page.page+1}}">»</a></li>
+                      {{else}}
+                        <li class="am-disabled"><a href="javascript:;">»</a></li>
+                      {{/if}}
+
+                      {{if $page.last eq 1}}
+                        <li><a href="{{$page.baseurl}}&page={{$page.pagecount}}">尾页</a></li>
+                      {{else}}
+                        <li class="am-disabled"><a href="javascript:;">尾页</a></li>
+                      {{/if}}
+  
+            </ul>
+          </div>
+          {{/if}}
+          <!-- 分页模板end -->
 
  
   </div>

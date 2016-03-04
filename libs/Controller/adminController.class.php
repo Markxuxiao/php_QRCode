@@ -82,7 +82,18 @@
 
 
 
-
+		public function erweima_print(){
+			$data_a=$_POST['data'];
+			$erweima_obj = M('erweima');
+			$data = $erweima_obj->find_in($data_a);
+			foreach ($data as $key => $value) {
+				$url = $erweima_obj->urlForPNG($value['nid']);
+				$data[$key]['url']= $url;
+			}
+			var_dump($data) ;
+			VIEW::assign(array('data'=>$data));
+			VIEW::display('admin/erweima_print.html');
+		}
 
 
 
